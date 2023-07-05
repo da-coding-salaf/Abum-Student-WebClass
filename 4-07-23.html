@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashoard</title>
+</head>
+<body>
+
+
+
+<div><input type="text"  id="values" ></span>
+</div>
+
+<br>
+<button onclick="Information()">
+	Get Info
+</button>
+
+
+
+
+
+<script type="text/javascript">
+
+	function Information(){
+		var value=document.getElementById('values').value;
+		var value_length=value.length
+		if(value_length==1){
+			alert("the length of your texts can not be 1")
+			return;
+		}
+
+		if(value_length%2==0){
+			alert("the length of your texts can not be even number")
+			return;
+		}
+		var middle_value=value[Math.ceil(value_length/2)-1]
+
+
+		console.log(value[0]+middle_value+value[value_length-1])
+
+
+
+
+
+
+
+	}
+
+
+</script>
+
+</body>
+</html>
