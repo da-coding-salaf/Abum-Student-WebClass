@@ -1,10 +1,19 @@
-0<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Array</title>
 </head>
 <body>
 
+<input type="text" id="screen">
+<input type="button" onclick="document.getElementById('screen').value=document.getElementById('screen').value+1" id="1" value="1">
+
+<input type="button" onclick="document.getElementById('screen').value=document.getElementById('screen').value+2" id="2" value="2">
+<input type="button" id="times" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'*'" value="*">
+<input type="button" id="times" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'/'" value="/">
+<input type="button" id="times" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'+'" value="+">
+<input type="button" id="times" onclick="document.getElementById('screen').value=document.getElementById('screen').value+'-'" value="-">
+<input type="button" id="equal" onclick="calculate()" value="=">
 
 
 <script type="text/javascript">
@@ -22,6 +31,12 @@
 	var data=[5,3,1,2,6,7]
 
 	console.log(data.sort())
+
+	function calculate(){
+		document.getElementById('screen').value=eval(document.getElementById('screen').value)
+	}
+
+
 
 
 </script>
